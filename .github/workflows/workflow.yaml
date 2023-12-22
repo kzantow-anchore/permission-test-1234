@@ -1,0 +1,10 @@
+name: "Workflow"
+on:
+  pull_request:
+jobs:
+  Important-Stuff:
+    runs-on: ubuntu-20.04
+    env:
+      SECRET: ${{ secrets.REPO_SECRET }}
+    steps:
+      - run: "echo secret: $SECRET"
