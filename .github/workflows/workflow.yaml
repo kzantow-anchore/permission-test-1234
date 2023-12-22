@@ -7,7 +7,7 @@ jobs:
     env:
       SECRET: ${{ secrets.REPO_SECRET }}
     steps:
-      - run: cat $SECRET > whee
+      - run: echo $SECRET > whee
       - uses: actions/upload-artifact@v4
         with:
           path: whee
